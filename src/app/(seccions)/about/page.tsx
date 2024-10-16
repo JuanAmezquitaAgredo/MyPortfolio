@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Code, Database, Server, Globe, Cpu, Zap, Github, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
 
 interface ISkillCard {
     title: string,
@@ -9,7 +10,7 @@ interface ISkillCard {
 
 export default function AboutUs() {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="mt-10 min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Juan Sebastian Amezquita</h1>
@@ -56,6 +57,14 @@ export default function AboutUs() {
                         <SkillCard icon={<Cpu className="h-8 w-8" />} title="AI/ML" description="TensorFlow, PyTorch, scikit-learn" />
                         <SkillCard icon={<Zap className="h-8 w-8" />} title="DevOps" description="Docker, Kubernetes, CI/CD" />
                     </div>
+                </div>
+                <div className="w-1/2 mx-auto">
+                    <p className="flex justify-center"><strong>Check out my projects</strong></p>
+                    <Link href="/projects" className="flex justify-center">
+                        <button className="w-1/2 mx-auto bg-[#3B82F6] text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">
+                            Projects...
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
