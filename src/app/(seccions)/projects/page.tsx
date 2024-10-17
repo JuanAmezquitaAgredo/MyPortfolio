@@ -38,7 +38,15 @@ const cardsData = [
         description: "Card layout and various designs using HTML and CSS.",
         url:"https://juanamezquitaagredo.github.io/cajas/",
         git:"https://github.com/JuanAmezquitaAgredo/cajas.git"
-    }    
+    },
+    {
+      id: 6,
+      imageUrl: "/images/login_project.png",
+      title: "Internationalization",
+      description: "Create a project using TypeScript and Internationalization",
+      url:"https://frontend-simu.vercel.app/",
+      git:"https://github.com/JuanAmezquitaAgredo/Frontend_simu.git"
+  },   
 ]
 
 export default function CardsPage() {
