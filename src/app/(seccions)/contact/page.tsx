@@ -1,81 +1,116 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Phone, MapPin } from 'lucide-react'
+import emailjs from 'emailjs-com'
 
 export default function Contact() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setName('')
-    setEmail('')
-    setMessage('')
+
+    setLoading(true)
+    setError(false)
+    setSuccess(false)
+
+    const templateParams = {
+      name,
+      email,
+      message,
+    }
+
+    try {
+      await emailjs.send(
+        'service_6ducez8', 
+        'template_rnxj60m', 
+        templateParams,
+        'CZhDtodWEdXPFWQca' 
+      )
+      setSuccess(true)
+    } catch (error) {
+      console.error('Error enviando el mensaje: ', error)
+      setError(true)
+    } finally {
+      setLoading(false)
+      setName('')
+      setEmail('')
+      setMessage('')
+    }
   }
 
   return (
-    <div className="mt-10 min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="mt-10 min-h-screen bg-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full mx-auto">
-        <div className="text-center">
-          <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            Contáctanos
-          </h1>
-          <p className="mt-4 text-xl text-gray-600">
-            Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible.
-          </p>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="lg:text-left text-center">
+            <h1 className="text-4xl font-extrabold text-white sm:text-5xl">
+              Get in Touch
+            </h1>
+            <p className="mt-4 text-lg text-gray-300">
+              We are here to help. Send us a message and we will get back to you as soon as possible.
+            </p>
+          </div>
 
-        <div className="mt-12 w-full grid grid-cols-1 gap-8 sm:grid-cols-1">
-          <div className="w-full bg-white shadow-lg rounded-lg overflow-hidden">
-            <div className="px-6 py-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">Envíanos un mensaje</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-                    Nombre
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                    className="mt-1 w-full border border-black rounded-lg focus:right-2"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="mt-1 w-full border border-black rounded-lg focus:right-2"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 ">
-                    Mensaje
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    required
-                    className="mt-1 w-full border border-black rounded-lg focus:right-2"
-                  />
-                </div>
-                <button type="submit" className="flex justify-center bg-[#3B82F6] text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">
-                  Enviar mensaje
-                </button>
-              </form>
-            </div>
+          <div className="w-full bg-gray-900 shadow-lg rounded-lg overflow-hidden p-8">
+            <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                  className="mt-1 w-full border border-gray-600 rounded-lg bg-gray-800 text-white focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                  className="mt-1 w-full border border-gray-600 rounded-lg bg-gray-800 text-white focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  required
+                  className="mt-1 w-full border border-gray-600 rounded-lg bg-gray-800 text-white focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300"
+                disabled={loading}
+              >
+                {loading ? 'Sending...' : 'Send Message'}
+              </button>
+            </form>
+
+            {success && <p className="text-green-500 mt-4">Message sent successfully!</p>}
+            {error && <p className="text-red-500 mt-4">Failed to send message. Please try again later.</p>}
           </div>
         </div>
       </div>
