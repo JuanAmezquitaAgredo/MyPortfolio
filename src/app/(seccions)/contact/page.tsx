@@ -49,15 +49,15 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="lg:text-left text-center">
             <h1 className="text-4xl font-extrabold text-white sm:text-5xl">
-              Get in Touch
+              Contact me
             </h1>
             <p className="mt-4 text-lg text-gray-300">
-              We are here to help. Send us a message and we will get back to you as soon as possible.
+            Hello! I'm here for you. If you'd like to reach out, feel free to send me an email, and I'll get back to you as soon as possible.
             </p>
           </div>
 
           <div className="w-full bg-gray-900 shadow-lg rounded-lg overflow-hidden p-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
+            <h2 className="text-2xl font-bold text-white mb-6">Send me a message</h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
