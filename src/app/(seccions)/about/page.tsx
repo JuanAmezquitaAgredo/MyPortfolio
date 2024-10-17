@@ -1,6 +1,9 @@
+'use client'
 import Image from "next/image";
-import { Code, Database, Server, Globe, Cpu, Zap, Github, Linkedin, Twitter } from "lucide-react";
+import { Code, Database, Server, Globe, Cpu, Zap } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
+import Modal from "@/components/UI/modal/modal";
 
 interface ISkillCard {
     title: string,
@@ -9,6 +12,11 @@ interface ISkillCard {
 }
 
 export default function AboutUs() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <div className="mt-10 min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-5xl mx-auto">
@@ -26,13 +34,13 @@ export default function AboutUs() {
                             I am a dedicated Mechanical Engineer from EAFIT University, with strong foundations in innovation,
                             project leadership, and teamwork. My experience spans engineering drafting and hands-on skills in automotive and motorcycle mechanics.
 
-                            Currently, I am expanding my expertise into software development, focusing on technologies such as TypeScript, 
+                            Currently, I am expanding my expertise into software development, focusing on technologies such as TypeScript,
                             JavaScript, Next.js, HTML, and CSS. This new chapter allows me to merge my engineering background with web development,
                             offering a unique approach to problem-solving and project management.
                         </p>
                         <p className="text-gray-300 leading-relaxed">
-                        I am eager to continue learning and take on new challenges in both the automotive and software industries, 
-                        aiming to contribute innovative and efficient solutions to every project I undertake.
+                            I am eager to continue learning and take on new challenges in both the automotive and software industries,
+                            aiming to contribute innovative and efficient solutions to every project I undertake.
                         </p>
                     </div>
                     <div className="relative">
@@ -58,15 +66,25 @@ export default function AboutUs() {
                         <SkillCard icon={<Zap className="h-8 w-8" />} title="DevOps" description="Docker, Kubernetes, CI/CD" />
                     </div>
                 </div>
-                <div className="w-1/2 mx-auto">
-                    <p className="flex justify-center"><strong>Check out my projects</strong></p>
-                    <Link href="/projects" className="flex justify-center">
-                        <button className="w-1/2 mx-auto bg-[#3B82F6] text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">
+                <div className="w-full mx-auto flex justify-around">
+                    <Link href="/projects" className="w-auto flex justify-center">
+                        <button className="w-[200px] mx-auto bg-[#3B82F6] text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">
                             Projects...
                         </button>
                     </Link>
+                    <button className="w-auto flex justify-center" onClick={openModal}>
+                        <p className="w-[200px] mx-auto bg-[#3B82F6] text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">View CV</p>
+                    </button>
                 </div>
             </div>
+            <Modal isOpen={isModalOpen} onClose={closeModal} customClass="w-[190vh] h-[90vh]">
+                <div className="flex-col justify-center items-center">
+                    <iframe src="/docs/HV_Juan.pdf" className="w-full h-[70vh]"></iframe>
+                    <button className="w-full m-2 flex justify-center">
+                        <a href="/docs/HV_Juan.pdf" download className="w-[200px] mx-auto bg-[#3B82F6] text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition duration-300">Download CV</a>
+                    </button>
+                </div>
+            </Modal>
         </div>
     )
 }
