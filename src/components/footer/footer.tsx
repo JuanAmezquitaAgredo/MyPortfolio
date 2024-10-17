@@ -50,11 +50,11 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/j_s_amezquita/profilecard/?igsh=MWd0azRvYnp5NGoyZA==" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                <Instagram className="h-6 w-6" />
+                <Instagram className="h-10 w-10" />
                 <span className="sr-only">Instagram</span>
               </a>
               <a href="https://www.linkedin.com/in/juan-sebastian-amezquita-agredo-08738b249/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                <Linkedin className="h-6 w-6" />
+                <Linkedin className="h-10 w-10" />
                 <span className="sr-only">LinkedIn</span>
               </a>
             </div>
