@@ -38,9 +38,9 @@ export default function Navbar() {
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
-                <X className="block h-6 w-6 hover:h-7 w-7 hover:text-black" aria-hidden="true" />
+                <X className="block h-6 hover:h-7 w-7 hover:text-black" aria-hidden="true" />
               ) : (
-                <Menu className="block h-6 w-6 hover:h-7 w-7 hover:text-black" aria-hidden="true" />
+                <Menu className="block h-6 hover:h-7 w-7 hover:text-black" aria-hidden="true" />
               )}
             </button>
           </div>
