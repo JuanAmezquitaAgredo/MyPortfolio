@@ -26,10 +26,10 @@ export default function Contact() {
 
     try {
       await emailjs.send(
-        'service_6ducez8', 
-        'template_rnxj60m', 
+        'service_6ducez8',
+        'template_rnxj60m',
         templateParams,
-        'CZhDtodWEdXPFWQca' 
+        'CZhDtodWEdXPFWQca'
       )
       setSuccess(true)
     } catch (error) {
@@ -52,7 +52,7 @@ export default function Contact() {
               Contact me
             </h1>
             <p className="mt-4 text-lg text-gray-300">
-            Hello! I'm here for you. If you'd like to reach out, feel free to send me an email, and I'll get back to you as soon as possible.
+              Hello! I&apos;m here for you. If you&apos;d like to reach out, feel free to send me an email, and I&apos;ll get back to you as soon as possible.
             </p>
           </div>
 

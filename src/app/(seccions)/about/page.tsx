@@ -2,12 +2,12 @@
 import Image from "next/image";
 import { Code, Database, Server, Globe, Cpu, Zap } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "@/components/UI/modal/modal";
 
 interface ISkillCard {
     title: string,
-    icon: any,
+    icon: JSX.Element,
     description: string,
 }
 
