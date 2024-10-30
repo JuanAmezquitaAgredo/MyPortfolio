@@ -2,51 +2,59 @@
 import Card from "@/components/UI/cartProject/cartProject"
 
 const cardsData = [
-    {
-        id: 1,
-        imageUrl: "/images/Urbana_project.png",
-        title: "Raices Urbanas",
-        description: "Project developed in JS with login and routing.",
-        git:"https://github.com/MoralesWilll/Raices-Urbanas-JS.git"
-    },
-    {
-        id: 2,
-        imageUrl: "/images/complexus_project.png",
-        title: "Complexus",
-        description: "Internal social network for buildings developed with Next.js, following best authentication practices.",
-        git:"https://github.com/JuanAmezquitaAgredo/complexus_frontend.git"
-    },
-    {
-        id: 3,
-        imageUrl: "/images/RickAndMorty_project.png",
-        title: "Rick And Morty",
-        description: "Consumption of the Rick and Morty API, presented through cards.",
-        git:"https://github.com/JuanAmezquitaAgredo/Rick_and_Morty.git"
-    },
-    {
-        id: 4,
-        imageUrl: "/images/project1.png",
-        title: "Model",
-        description: "Layout of an illustrative page with HTML and CSS.",
-        url:"https://juanamezquitaagredo.github.io/PruebaDeDeesempe-oHTMLyCSS/",
-        git:"https://github.com/JuanAmezquitaAgredo/PruebaDeDeesempe-oHTMLyCSS.git"
-    },
-    {
-        id: 5,
-        imageUrl: "/images/inspiradoras.png",
-        title: "HTML and CSS",
-        description: "Card layout and various designs using HTML and CSS.",
-        url:"https://juanamezquitaagredo.github.io/cajas/",
-        git:"https://github.com/JuanAmezquitaAgredo/cajas.git"
-    },
-    {
-      id: 6,
-      imageUrl: "/images/login_project.png",
-      title: "Internationalization",
-      description: "Create a project using TypeScript and Internationalization",
-      url:"https://frontend-simu.vercel.app/",
-      git:"https://github.com/JuanAmezquitaAgredo/Frontend_simu.git"
-  },   
+  {
+    id: 1,
+    imageUrl: "/images/Urbana_project.png",
+    title: "Raices Urbanas",
+    description: "Project developed in JS with login and routing.",
+    git: "https://github.com/MoralesWilll/Raices-Urbanas-JS.git"
+  },
+  {
+    id: 2,
+    imageUrl: "/images/complexus_project.png",
+    title: "Complexus",
+    description: "Internal social network for buildings developed with Next.js, following best authentication practices.",
+    git: "https://github.com/JuanAmezquitaAgredo/complexus_frontend.git"
+  },
+  {
+    id: 3,
+    imageUrl: "/images/RickAndMorty_project.png",
+    title: "Rick And Morty",
+    description: "Consumption of the Rick and Morty API, presented through cards.",
+    git: "https://github.com/JuanAmezquitaAgredo/Rick_and_Morty.git"
+  },
+  {
+    id: 4,
+    imageUrl: "/images/project1.png",
+    title: "Model",
+    description: "Layout of an illustrative page with HTML and CSS.",
+    url: "https://juanamezquitaagredo.github.io/PruebaDeDeesempe-oHTMLyCSS/",
+    git: "https://github.com/JuanAmezquitaAgredo/PruebaDeDeesempe-oHTMLyCSS.git"
+  },
+  {
+    id: 5,
+    imageUrl: "/images/inspiradoras.png",
+    title: "HTML and CSS",
+    description: "Card layout and various designs using HTML and CSS.",
+    url: "https://juanamezquitaagredo.github.io/cajas/",
+    git: "https://github.com/JuanAmezquitaAgredo/cajas.git"
+  },
+  {
+    id: 6,
+    imageUrl: "/images/login_project.png",
+    title: "Internationalization",
+    description: "Create a project using TypeScript and Internationalization",
+    url: "https://frontend-simu.vercel.app/",
+    git: "https://github.com/JuanAmezquitaAgredo/Frontend_simu.git"
+  },
+  {
+    id: 7,
+    imageUrl: "/images/Web-de-empleos.png",
+    title: "Web de empleos",
+    description: "Pagina web para buscar empleos desarrollada con Next.js y Styled-components.",
+    url: "https://web-de-empleos.netlify.app/companies",
+    git: "https://github.com/JuanAmezquitaAgredo/vacantes.git"
+  },
 ]
 
 export default function CardsPage() {
