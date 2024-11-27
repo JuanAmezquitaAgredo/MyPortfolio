@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
-import { Code, Database, Server, Globe, Cpu, Zap } from "lucide-react";
+import { Code, Database, Server, Globe} from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 import Modal from "@/components/UI/modal/modal";
