@@ -29,18 +29,14 @@ export default function AboutUs() {
                     <div className="col-span-2">
                         <h2 className="text-3xl font-bold mb-6 text-[#3B82F6]">About Me</h2>
                         <p className="text-gray-300 leading-relaxed mb-6">
-                            <strong>Mechanical Engineer and Aspiring Software Developers</strong> <br />
+                            <strong>Frontend Developer and Mechanical Engineer</strong> <br />
 
-                            I am a dedicated Mechanical Engineer from EAFIT University, with strong foundations in innovation,
-                            project leadership, and teamwork. My experience spans engineering drafting and hands-on skills in automotive and motorcycle mechanics.
-
-                            Currently, I am expanding my expertise into software development, focusing on technologies such as TypeScript,
-                            JavaScript, Next.js, HTML, and CSS. This new chapter allows me to merge my engineering background with web development,
-                            offering a unique approach to problem-solving and project management.
-                        </p>
-                        <p className="text-gray-300 leading-relaxed">
-                            I am eager to continue learning and take on new challenges in both the automotive and software industries,
-                            aiming to contribute innovative and efficient solutions to every project I undertake.
+                            As a software developer with experience in advanced technologies such as Next.js, React, TypeScript, JavaScript, Flutter, 
+                            HTML and CSS, I bring a solid combination of technical knowledge and web development skills. My background in mechanical 
+                            engineering provides me with a robust foundation to tackle complex challenges and manage projects with an analytical and 
+                            solution-oriented perspective. My ability to integrate innovative and efficient solutions in the design and development of
+                             web applications, along with my enthusiasm for learning and facing new challenges, positions me as a versatile and proactive
+                              professional, ready to contribute to the success of projects and teams.
                         </p>
                     </div>
                     <div className="relative">
@@ -58,12 +54,10 @@ export default function AboutUs() {
                 <div className="mb-16">
                     <h2 className="text-3xl font-bold mb-8 text-[#3B82F6]">Skills & Expertise</h2>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                        <SkillCard icon={<Code className="h-8 w-8" />} title="Languages" description="JavaScript, Python, TypeScript, MATLAP" />
-                        <SkillCard icon={<Globe className="h-8 w-8" />} title="Front-end" description="React, Vite, Next.js" />
-                        <SkillCard icon={<Server className="h-8 w-8" />} title="Back-end" description="Node.js, Django, FastAPI" />
-                        <SkillCard icon={<Database className="h-8 w-8" />} title="Databases" description="PostgreSQL, MongoDB, Redis" />
-                        <SkillCard icon={<Cpu className="h-8 w-8" />} title="AI/ML" description="TensorFlow, PyTorch, scikit-learn" />
-                        <SkillCard icon={<Zap className="h-8 w-8" />} title="DevOps" description="Docker, Kubernetes, CI/CD" />
+                        <SkillCard icon={<Code className="h-8 w-8" />} title="Languages" description="JavaScript, Python, TypeScript, MATLAP, Dart" />
+                        <SkillCard icon={<Globe className="h-8 w-8" />} title="Front-end" description="Next.js, React, Vite, Flutter" />
+                        <SkillCard icon={<Server className="h-8 w-8" />} title="Back-end" description="Node.js" />
+                        <SkillCard icon={<Database className="h-8 w-8" />} title="Databases" description="PostgreSQL, MySQL" />
                     </div>
                 </div>
                 <div className="w-full mx-auto flex justify-around">

@@ -51,9 +51,30 @@ const cardsData = [
     id: 7,
     imageUrl: "/images/Web-de-empleos.png",
     title: "Web de empleos",
-    description: "Pagina web para buscar empleos desarrollada con Next.js y Styled-components.",
+    description: "Next.js - Pagina web para buscar empleos desarrollada con Next.js y Styled-components.",
     url: "https://web-de-empleos.netlify.app/companies",
     git: "https://github.com/JuanAmezquitaAgredo/vacantes.git"
+  },
+  {
+    id: 8,
+    imageUrl: "/images/gestion_de_vehiculos.png",
+    title: "Gestion de Vehiculos",
+    description: "Next.js - Pagina web para gestionar el mantenimiento de los vehiculos en un taller automotriz",
+    git: "https://github.com/JuanAmezquitaAgredo/prueba_desemp.git"
+  },
+  {
+    id: 9,
+    imageUrl: "/images/beauty_Salon.png",
+    title: "Salon de belleza",
+    description: "Next.js - Pagina web para gestionar un salon de belleza",
+    git: "https://github.com/JuanAmezquitaAgredo/Beauty-Salon.git"
+  },
+  {
+    id: 10,
+    imageUrl: "/images/voluntariado.png",
+    title: "Voluntariados",
+    description: "Next.js - Pagina web para gestionar los voluntariados de personas a nivel mundial",
+    git: "https://github.com/JuanAmezquitaAgredo/community-volunteering.git"
   },
 ]
 
